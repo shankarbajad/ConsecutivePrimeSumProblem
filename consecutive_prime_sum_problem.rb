@@ -19,14 +19,11 @@ def find_sequence
   return @final_prime_hash[@final_prime_hash.keys.max]
 end
 def get_most_large_prime
-  all_primes = Prime.take_while {|p| p < 1000000 }
-  biggest_prime = all_primes.last
-  max_addable_point = (biggest_prime/2).next
-  @ranged_primes = all_primes.select{|prime| prime < max_addable_point}.sort.reverse
+  @ranged_primes = Prime.take_while {|p| p < 500000 }.sort.reverse
   @final_prime_arr = []
-  @final_prime_hash = {0 => []}
+  @final_prime_hash = {}
   find_sequence
   puts "Prime Number => #{@final_prime_hash.keys.last}"
-  puts "Consecutive Prime Numbers => #{@final_prime_hash.values.last}"
+  puts "Consecutive Prime Numbers => #{@final_prime_hash.values.last.reverse}"
 end
 get_most_large_prime
