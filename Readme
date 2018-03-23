@@ -1,0 +1,7 @@
+== README
+
+  This program will find largest prime number under 1 million as a result of summation of longest sequence of Consecutive Prime Numbers.
+
+  To run:
+  Go to same directory in terminal then run following command:
+  ruby consecutive_prime_sum_problem.rb
